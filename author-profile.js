@@ -1,4 +1,4 @@
-function fun_get_card_author_des() {
+function fun_get_card_author_des(current_post_id) {
     const card_author_img = document.querySelector("#card-author-img");
     const card_author_des = document.querySelector("#card-author-des");
     if(card_author_img !== null){
@@ -26,4 +26,3 @@ function fun_get_card_author_des() {
 	    card_author_des.innerHTML = `<p>${line_one}</p><ul class="author-social">${links}</ul>`;
     }
 }
-fun_get_card_author_des();
