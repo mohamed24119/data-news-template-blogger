@@ -2,7 +2,7 @@ function get_related_posts(posts_count, max_results, label_name, widget_title) {
 	let $related_posts = document.querySelector("#related-posts");
 	if($related_posts !== null && (posts_count !== undefined || posts_count !== "")) {
 		let $fetch_url = "";
-		$fetch_url = `https://www.blogger.com/feeds/${$blog_id}/posts/default/-/${label_name}?alt=json&max-results=${max_results}&start-index=1`;
+		$fetch_url = `https://www.blogger.com/feeds/${blog_id}/posts/default/-/${label_name}?alt=json&max-results=${max_results}&start-index=1`;
 		fetch($fetch_url)
 		.then(function(response) {return response.json()})
 		.then(function(data) {
