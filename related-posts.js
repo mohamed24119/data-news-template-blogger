@@ -1,4 +1,4 @@
-function get_related_posts(posts_count, max_results, label_name, widget_title) {
+function get_related_posts(class_name,posts_count, max_results, label_name, widget_title) {
 	let $related_posts = document.querySelector("#related-posts");
 	if($related_posts !== null && (posts_count !== undefined || posts_count !== "")) {
 		let $fetch_url = "";
@@ -42,7 +42,7 @@ function get_related_posts(posts_count, max_results, label_name, widget_title) {
 			if(items.length > 1) {
 				$related_posts.innerHTML = `<div class="widget">
 				    <div class="widget-header"><div class="widget-title"><i class="icon fa-solid fa-random"></i> ${widget_title}</a></div></div>
-           		    <div class="widget-body blog-posts">${items_group}</div>
+           		    <div class="widget-body blog-posts ${class_name}">${items_group}</div>
 				</div>`;
 			}
 		})
