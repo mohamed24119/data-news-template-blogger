@@ -18,10 +18,10 @@ function get_table_of_contents(el, select) {
 			toc_box.appendChild(toc_button);
 			let toc_body = document.createElement("div");
 			toc_body.className = "toc-body toggle";
-			toc_body.id = "headdigBoxBody";
+			toc_body.id = "toc-body";
 			toc_box.appendChild(toc_body);
 			let ol = document.createElement("ol");
-			ol.className = "numbered-list";
+			ol.className = "toc-list";
 			for(i = 0; i < headding.length; i++) {
 				if(headding[i].textContent != "") {
 					headding[i].setAttribute("id", `headding-${i}`);
