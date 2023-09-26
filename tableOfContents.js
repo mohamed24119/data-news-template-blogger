@@ -23,7 +23,7 @@ function get_table_of_contents(el, select) {
 			let ol = document.createElement("ol");
 			ol.className = "toc-list";
 			for(i = 0; i < headding.length; i++) {
-				if(headding[i].textContent != "") {
+				if(headding[i].textContent !== "") {
 					headding[i].setAttribute("id", `headding-${i}`);
 					let li = document.createElement("li");
 					li.className = `headding-${headding[i].nodeName.toLowerCase()}`;
@@ -45,3 +45,8 @@ function get_table_of_contents(el, select) {
 		}
 	}
 }
+/*
+	** By Mohamed Refaat
+	** https://www.facebook.com/mohamed24119
+	** https://github.com/mohamed24119
+*/
