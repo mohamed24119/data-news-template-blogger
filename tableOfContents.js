@@ -37,11 +37,17 @@ function get_table_of_contents(el, select) {
 			for(o = 0; o < headding.length; o++) {
 				toc_body.appendChild(ol);
 				headding[0].before(toc_box);
-				toc_button.addEventListener("click", function() {
-					toc_body.classList.toggle("toggle");
-					this.classList.toggle("active");
-				});
 			}
+
+			toc_button.addEventListener("click", function() {
+				if(!this.classList.contains("active") && !toc_body.classList.contains("active")){
+					toc_body.classList.add("toggle");
+					this.classList.add("active");
+				} else {
+					toc_body.classList.remove("toggle");
+					this.classList.remove("active");
+				}
+			});
 		}
 	}
 }
