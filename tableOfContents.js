@@ -17,7 +17,7 @@ function get_table_of_contents(el, select) {
 			toc_button.appendChild(toc_button_text);
 			toc_box.appendChild(toc_button);
 			let toc_body = document.createElement("div");
-			toc_body.className = "toc-body toggle";
+			toc_body.className = "toc-body active";
 			toc_body.id = "toc-body";
 			toc_box.appendChild(toc_body);
 			let ol = document.createElement("ol");
