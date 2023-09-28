@@ -40,13 +40,8 @@ function get_table_of_contents(el, select) {
 			}
 
 			toc_button.addEventListener("click", function() {
-				if(!this.classList.contains("active") && !toc_body.classList.contains("active")){
-					toc_body.classList.add("toggle");
-					this.classList.add("active");
-				} else {
-					toc_body.classList.remove("toggle");
-					this.classList.remove("active");
-				}
+				toc_body.classList.toggle("toggle");
+				this.classList.toggle("active");
 			});
 		}
 	}
