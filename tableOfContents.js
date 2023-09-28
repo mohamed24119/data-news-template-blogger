@@ -4,10 +4,10 @@ function get_table_of_contents(el, select) {
 		let headding = elementSelect.querySelectorAll(select);
 		if(headding.length > 0) {
 			let toc_box = document.createElement("div");
-			toc_box.className = "toc-box";
+				toc_box.className = "toc-box";
 			let toc_button = document.createElement("button");
-			toc_button.className = "toc-button active";
-			toc_button.id = "toc_button";
+				toc_button.className = "toc-button active";
+				toc_button.id = "toc_button";
 			let toc_button_text = "";
 			if(document.dir === "rtl") {
 				toc_button_text = document.createTextNode("جدول المحتويات");
@@ -40,7 +40,7 @@ function get_table_of_contents(el, select) {
 			}
 
 			toc_button.addEventListener("click", function() {
-				toc_body.classList.toggle("toggle");
+				toc_body.classList.toggle("active");
 				this.classList.toggle("active");
 			});
 		}
