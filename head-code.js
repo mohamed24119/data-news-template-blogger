@@ -35,7 +35,7 @@ month_m = ["January", "February", "March", "April", "May", "June", "July", "Augu
 function fun_blogger_variables(data,item) {
 	post_title = item.title.$t;
     post_url = item.link[4].href;
-	if(item.media$thumbnail && item.media$thumbnail.url){post_thumbnail = item.media$thumbnail.url}
+	if(item.media$thumbnail){post_thumbnail = item.media$thumbnail.url}
 	else{post_thumbnail = default_thumbnail;}
 	post_published = item.published.$t;
 	convert_date = post_published.split("T")[0].split("-");
