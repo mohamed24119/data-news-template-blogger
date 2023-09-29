@@ -82,9 +82,10 @@ if (widgetFeaturedPost_empty !== null) {
 }
 
 
-/* حقوق القالب */
- const ach = document.querySelector("#credit");
- if(ach !== null) {
+
+
+const ach = document.querySelector("#credit");
+if(ach !== null && ach.innerHTML !== "") {
   const ach_a = document.createElement("a");
   const ach_text = "قالب داتا نيوز المجاني - الفنان ويب";
   ach_a.setAttribute("href", "https://alfanan-developer-wep.blogspot.com/");
@@ -99,7 +100,9 @@ if (widgetFeaturedPost_empty !== null) {
   ach_img.setAttribute("alt", ach_text);
   ach_a.appendChild(ach_img);
   ach.appendChild(ach_a);
- }
+ }	
+
+ 
 
 /* تأجيل الصور والإطارات */
 function get_lazyload() {
@@ -117,37 +120,6 @@ function get_lazyload() {
 
 
 /* الأقسام المخصصة في الرئيسية */
-function fun_blogger_variables(data,item) {
-	post_title = item.title.$t;
-    post_url = item.link[4].href;
-	if(item.media$thumbnail && item.media$thumbnail.url){post_thumbnail = item.media$thumbnail.url}
-	else{post_thumbnail = default_thumbnail;}
-	post_published = item.published.$t;
-	convert_date = post_published.split("T")[0].split("-");
-	if (convert_date[1] < 10) {check_month_number = convert_date[1].split("")[1]-1;} 
-	else { check_month_number = convert_date[1]+1;}
-}
-function fun_items_group(data,item){
- items_group += `
-       <div class="col">
-        <article class="article-posts">
-         <div class="article-posts-img">
-          <a href="${post_url}"><img data-src="${post_thumbnail}" alt="${post_title}"></a>
-         </div>
-         <div class="article-posts-body">
-          <h2 class="line posts-headding"><a class="posts-title" href="${post_url}">${post_title}</a></h2>
-          <time class="post-published" data-time="${post_published}">
-           <i class="fa-regular fa-calendar-days"></i>
-           ${convert_date[2]} ${month_m[check_month_number]} ${convert_date[0]}
-          </time>
-         </div>
-        </article>
-       </div>
- `;
-}
-
-
-
 const $parent_element = document.querySelectorAll("[data-posts-count]");
 if($parent_element.length > 0) {
 	for(let i = 0; i < $parent_element.length; i++) {
@@ -256,20 +228,7 @@ if($parent_element.length > 0) {
 } // end if
 
 
-/*------- استدعاء ملف css -------*/
-function get_file_css(_select_element, _link) {
-    let create_link = document.createElement("link");
-    create_link.setAttribute("rel", "stylesheet");
-    create_link.setAttribute("href", _link);
-    document.querySelector(_select_element).appendChild(create_link);
-}
 
- /*------- استدعاء ملف js -------*/
-function get_file_script(_select_element, _link) {
-    let create_script_src = document.createElement("script");
-    create_script_src.setAttribute("src", _link);
-    document.querySelector(_select_element).appendChild(create_script_src);
-}
 
  /*------- الإعلانات الجانبية -------*/
 const ads_inline_start = document.querySelector(".ads-inline-start"),
@@ -278,22 +237,6 @@ const ads_inline_start = document.querySelector(".ads-inline-start"),
 	48 < document.documentElement.scrollTop ? (ads_inline_start.classList.add("ads-fixed"), ads_inline_end.classList.add("ads-fixed")) : (ads_inline_start.classList.remove("ads-fixed"), ads_inline_end.classList.remove("ads-fixed"))
 });
 
-
-
-
-
-
-console.table({
-"اسم القالب":"داتا نيوز التيمت",
-"الإصدار":"2.0.0",
-"تاريخ اخر تحديث":"20/8/2023",
-"المنصة":"بلوجر",
-"السعر":"5$",
-"برمجة":"Mohamed Refaat",
-"صفحة المطور":"https://www.facebook.com/mohamed24119",
-"الناشر":"الفنان ويب",
-"صفحة الناشر":"https://alfanan-developer-wep.blogspot.com"
-});
 
 
 /*--------------- قص الصور ---------------*/ 
