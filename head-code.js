@@ -1,3 +1,37 @@
+const supportsTouch = window.matchMedia("(pointer:coarse)").matches;
+let first_mouse_move = false;
+let empty_event = false;
+let touch_start = false;
+let scroll_status = false;
+
+let items_group = "",
+	post_title = "",
+	post_url = "",
+	post_thumbnail = "",
+	post_published = "",
+	convert_date = "",
+	check_month_number = "",
+	AM,
+	PM,
+	week,
+	month_m,
+	hour_system_24 = false;
+const new_date = new Date();
+if(document.documentElement.lang == "ar"){
+AM = "ص";
+PM = "م";
+week = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
+month_m = ["يناير", "فبراير", "مارس", "ابريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
+} else  {
+AM = "AM";
+PM = "PM";
+week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+month_m = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+}
+
+
+
+
 function fun_blogger_variables(data,item) {
 	post_title = item.title.$t;
     post_url = item.link[4].href;
