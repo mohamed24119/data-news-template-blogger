@@ -132,6 +132,7 @@ if($parent_element.length > 0) {
                     $fetch_url = "",
                     data_label_name = "",
                     widget_header = "";
+					
 				if($parent_element[i].hasAttribute("data-start-index")) {data_start_index = $parent_element[i].getAttribute("data-start-index");} 
 				else {data_start_index = 1;}
 
@@ -164,16 +165,25 @@ if($parent_element.length > 0) {
 				
 				else if($parent_element[i].classList.contains("last-posts-label")) {
 					data_label_name = $parent_element[i].getAttribute("data-label-name");
+
+					function fun_check_label_name($icon){
+						if($parent_element[i].hasAttribute("data-widget-title") && data_widget_title != "") {
+							widget_header = `<div class="widget-header"><a class="widget-title" href="${window.location.origin}/search/label/${data_label_name}">
+							<i class="${$icon}"></i> ${data_widget_title}</a></div>`;
+						} else {
+							widget_header = `<div class="widget-header"><a class="widget-title" href="${window.location.origin}/search/label/${data_label_name}">
+							<i class="${$icon}"></i> ${data_label_name}</a></div>`;
+						}
+					}
 					if($parent_element[i].hasAttribute("data-random-posts") && $parent_element[i].getAttribute("data-random-posts") == "true") {
 						let data_random_posts = $parent_element[i].getAttribute("data-random-posts");
 						$fetch_url = `${location.origin}/feeds/posts/default/-/${data_label_name}?alt=json&max-results=${data_max_results}&start-index=${data_start_index}`;
-						widget_header = `<div class="widget-header"><a class="widget-title" href="${window.location.origin}/search/label/${data_label_name}">
-						<i class="icon fa-solid fa-random"></i> ${data_label_name}</a></div>`;
+						fun_check_label_name("icon fa-solid fa-random");
+
 					}
 					else {
-					$fetch_url = `${location.origin}/feeds/posts/default/-/${data_label_name}?alt=json&max-results=${data_posts_count}&start-index=${data_start_index}`;
-						widget_header = `<div class="widget-header"><a class="widget-title" href="${window.location.origin}/search/label/${data_label_name}">
-						<i class="icon fa-solid fa-tag"></i> ${data_label_name}</a></div>`;
+						$fetch_url = `${location.origin}/feeds/posts/default/-/${data_label_name}?alt=json&max-results=${data_posts_count}&start-index=${data_start_index}`;
+						fun_check_label_name("icon fa-solid fa-tag");
 					}
 				}
 				
