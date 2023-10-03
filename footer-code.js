@@ -87,7 +87,7 @@ const ach = document.querySelector("#credit");
 if(ach !== null) {
 	ach.style.cssText = `display:block !important;width:24px !important;height:24px !important;transform:scale(1) !important;opacity:1 !important;overflow:visible !important;`;
   	const ach_a = document.createElement("a");
-		ach_a.style.cssText = `display:felx !important;width:24px !important;height:24px !important;transform:scale(1) !important;opacity:1 !important;overflow:visible !important;`;
+		ach_a.style.cssText = `display:flex !important;width:24px !important;height:24px !important;transform:scale(1) !important;opacity:1 !important;overflow:visible !important;`;
   	const ach_text = "قالب داتا نيوز التيميت - الفنان ويب";
 		ach_a.setAttribute("href", "https://alfanan-developer-wep.blogspot.com/");
   		ach_a.setAttribute("title", ach_text);
