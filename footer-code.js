@@ -103,7 +103,7 @@ if(ach !== null) {
   	ach_a.appendChild(ach_img);
   	ach.appendChild(ach_a);
  }	else {
-	document.body.innerHTML = '<div style="max-width:480px;height:max-content;position:fixed;background-color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;inset:0;margin:auto;border-radius:8px;padding:30px">ظهرت هذه الصفحة لأنك تحاول إزالة حقوق التصميم</div>';
+	document.body.innerHTML = '<div style="max-width:480px;height:max-content;position:fixed;background-color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;inset:0;margin:auto;border-radius:8px;padding:30px;flex-direction:column;row-gap:30px"><i style="font-size:72px;color:#df2829" class="fa-solid fa-bug"></i> يبدوا أن أحد المسئولين عن هذه المدونة يحاول إزالة حقوق التصميم وليس من حقه إزالتها لذلك ظهر هذا التنبيه بشكل تلقائي.</div>';
  }
 
  
