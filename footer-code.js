@@ -85,9 +85,9 @@ if (widgetFeaturedPost_empty !== null) {
 
 const ach = document.querySelector("#credit");
 if(ach !== null) {
-	ach.style.cssText = `display:block !important;width:24px !important;height:24px !important;`;
+	ach.style.cssText = `display:block !important;width:24px !important;height:24px !important;transform:scale(1) !important;opacity:1 !important;overflow:visible !important;`;
   	const ach_a = document.createElement("a");
-		ach_a.style.cssText = `display:block !important;`;
+		ach_a.style.cssText = `display:felx !important;width:24px !important;height:24px !important;transform:scale(1) !important;opacity:1 !important;overflow:visible !important;`;
   	const ach_text = "قالب داتا نيوز التيميت - الفنان ويب";
 		ach_a.setAttribute("href", "https://alfanan-developer-wep.blogspot.com/");
   		ach_a.setAttribute("title", ach_text);
@@ -95,14 +95,16 @@ if(ach !== null) {
   		ach_a.setAttribute("rel", "nofollow");
  		ach_a.setAttribute("target", "_blank");
   const ach_img = document.createElement("img");
-	ach_img.style.cssText = `display:block !important;`;
+	ach_img.style.cssText = `display:block !important;width:24px !important;height:24px !important;transform:scale(1) !important;opacity:1 !important;overflow:visible !important;`;
   	ach_img.setAttribute("data-src", "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTI3aYt0nit5nA-K9Crh8DHoca4ZnAxYgb4fX1tfskzNJtyA5QFewobzDGj7btzvmgnJY2tuIfpziNk9cThZWKWbptFdEd4x6OTyRxJfp35xoPqk75TUroIBUreN5_3er8nIEjEqE729tjbk76_GyRamSQfvUsaafDcmPGB1BMjWQegSWnyN_hTILJ651u/s24/454.png");
   	ach_img.setAttribute("width", "24");
   	ach_img.setAttribute("height", "24");
   	ach_img.setAttribute("alt", ach_text);
   	ach_a.appendChild(ach_img);
   	ach.appendChild(ach_a);
- }	
+ }	else {
+	document.body.innerHTML = '<div style="max-width:480px;height:max-content;position:fixed;background-color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;inset:0;margin:auto;border-radius:8px;padding:30px">ظهرت هذه الصفحة لأنك تحاول إزالة حقوق التصميم</div>';
+ }
 
  
 
