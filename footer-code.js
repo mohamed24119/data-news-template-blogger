@@ -83,23 +83,25 @@ if (widgetFeaturedPost_empty !== null) {
 
 
 
-
 const ach = document.querySelector("#credit");
 if(ach !== null) {
-  const ach_a = document.createElement("a");
-  const ach_text = "قالب داتا نيوز المجاني - الفنان ويب";
-  ach_a.setAttribute("href", "https://alfanan-developer-wep.blogspot.com/");
-  ach_a.setAttribute("title", ach_text);
-  ach_a.setAttribute("aria-label", ach_text);
-  ach_a.setAttribute("rel", "nofollow");
-  ach_a.setAttribute("target", "_blank");
+	ach.style.cssText = `display:block !important;width:24px !important;height:24px !important;`;
+  	const ach_a = document.createElement("a");
+		ach_a.style.cssText = `display:block !important;`;
+  	const ach_text = "قالب داتا نيوز التيميت - الفنان ويب";
+		ach_a.setAttribute("href", "https://alfanan-developer-wep.blogspot.com/");
+  		ach_a.setAttribute("title", ach_text);
+  		ach_a.setAttribute("aria-label", ach_text);
+  		ach_a.setAttribute("rel", "nofollow");
+ 		ach_a.setAttribute("target", "_blank");
   const ach_img = document.createElement("img");
-  ach_img.setAttribute("data-src", "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTI3aYt0nit5nA-K9Crh8DHoca4ZnAxYgb4fX1tfskzNJtyA5QFewobzDGj7btzvmgnJY2tuIfpziNk9cThZWKWbptFdEd4x6OTyRxJfp35xoPqk75TUroIBUreN5_3er8nIEjEqE729tjbk76_GyRamSQfvUsaafDcmPGB1BMjWQegSWnyN_hTILJ651u/s24/454.png");
-  ach_img.setAttribute("width", "24");
-  ach_img.setAttribute("height", "24");
-  ach_img.setAttribute("alt", ach_text);
-  ach_a.appendChild(ach_img);
-  ach.appendChild(ach_a);
+	ach_img.style.cssText = `display:block !important;`;
+  	ach_img.setAttribute("data-src", "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTI3aYt0nit5nA-K9Crh8DHoca4ZnAxYgb4fX1tfskzNJtyA5QFewobzDGj7btzvmgnJY2tuIfpziNk9cThZWKWbptFdEd4x6OTyRxJfp35xoPqk75TUroIBUreN5_3er8nIEjEqE729tjbk76_GyRamSQfvUsaafDcmPGB1BMjWQegSWnyN_hTILJ651u/s24/454.png");
+  	ach_img.setAttribute("width", "24");
+  	ach_img.setAttribute("height", "24");
+  	ach_img.setAttribute("alt", ach_text);
+  	ach_a.appendChild(ach_img);
+  	ach.appendChild(ach_a);
  }	
 
  
