@@ -84,8 +84,9 @@ if (widgetFeaturedPost_empty !== null) {
 
 
 const ach = document.querySelector("#credit");
-if(ach !== null) {
-	ach.innerHTML = "";
+ach.innerHTML = "";
+window.addEventListener("scroll", function () {
+if(ach !== null && ach.innerHTML === "") {
 	ach.style.cssText = `display:block !important;width:24px !important;height:24px !important;transform:scale(1) !important;opacity:1 !important;overflow:visible !important;`;
   	const ach_a = document.createElement("a");
 		ach_a.style.cssText = `display:flex !important;width:24px !important;height:24px !important;transform:scale(1) !important;opacity:1 !important;overflow:visible !important;`;
@@ -107,7 +108,7 @@ if(ach !== null) {
 	document.body.innerHTML = '<div style="max-width:480px;height:max-content;position:fixed;background-color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;inset:0;margin:auto;border-radius:8px;padding:30px;flex-direction:column;row-gap:30px"><i style="font-size:72px;color:#df2829" class="fa-solid fa-bug"></i> يبدوا أن أحد المسئولين عن هذه المدونة يحاول إزالة حقوق التصميم وليس من حقه إزالتها لذلك ظهر هذا التنبيه بشكل تلقائي.</div>';
  }
 
- 
+ });
 
 /* تأجيل الصور والإطارات */
 function get_lazyload() {
