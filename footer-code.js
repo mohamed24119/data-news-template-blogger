@@ -85,7 +85,7 @@ if (widgetFeaturedPost_empty !== null) {
 
 
 const ach = document.querySelector("#credit");
-if(ach !== null && ach.innerHTML !== "") {
+if(ach !== null) {
   const ach_a = document.createElement("a");
   const ach_text = "قالب داتا نيوز المجاني - الفنان ويب";
   ach_a.setAttribute("href", "https://alfanan-developer-wep.blogspot.com/");
@@ -226,17 +226,6 @@ if($parent_element.length > 0) {
 		} // end if
 	} // end for
 } // end if
-
-
-
-
- /*------- الإعلانات الجانبية -------*/
-const ads_inline_start = document.querySelector(".ads-inline-start"),
-	ads_inline_end = document.querySelector(".ads-inline-end");
-992 <= window.innerWidth && document.addEventListener("scroll", function() {
-	48 < document.documentElement.scrollTop ? (ads_inline_start.classList.add("ads-fixed"), ads_inline_end.classList.add("ads-fixed")) : (ads_inline_start.classList.remove("ads-fixed"), ads_inline_end.classList.remove("ads-fixed"))
-});
-
 
 
 /*--------------- قص الصور ---------------*/ 
