@@ -21,7 +21,7 @@ function get_related_posts(class_name,posts_count, max_results, label_name, widg
 					let post_published = item.published.$t;
 					convert_date = post_published.split("T")[0].split("-");
 					if(convert_date[1] < 10) {check_month_number = convert_date[1].split("")[1] - 1;} 
-					else {check_month_number = convert_date[1] + 1;}
+					else {check_month_number = convert_date[1] - 1;}
 					if(window.location.href === post_url) {continue;}
 					items_group += `<div class="col">
                         <article class="article-posts">
